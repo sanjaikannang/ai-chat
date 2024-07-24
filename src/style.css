@@ -1,0 +1,30 @@
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .animation {
+  
+    animation: fade-in linear;
+
+    animation-timeline: view(250px);
+
+    animation-name: grow;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-timing-function: linear;
+  }
+  
+  @keyframes grow {
+    from {
+      /* transform: scaleX(0); */
+      opacity: 0;
+    scale: 0.8;
+    }    
+  
+    to {
+      /* transform: scaleX(1); */
+      opacity: 5;
+      scale: 1;
+    }
+  }

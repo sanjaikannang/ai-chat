@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // function for bar toggle open button
+      function toggleMobileMenu() {
+        var menu = document.getElementById("mobile-menu-2");
+        var button = document.querySelector(
+          '[data-collapse-toggle="mobile-menu-2"]'
+        );
+
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          button.setAttribute("aria-expanded", "true");
+        } else {
+          menu.classList.add("hidden");
+          button.setAttribute("aria-expanded", "false");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- NavBar Section -->
+    <nav class="py-2 fixed top-0 left-0 right-0 z-10 shadow-xs bg-white">
+      <!-- backdrop-filter backdrop-blur-sm -->
+      <div
+        class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
+      >
+        <a href="#" class="flex items-center">
+          <img
+            src="https://ai-chat.it/img/branding/logo-aichat-extended.svg"
+            class="w-40 h-8"
+            alt="ai-chat"
+          />
+        </a>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
+          <div class="hidden md:flex gap-1">
+            <a
+              href="#"
+              class="rounded-full text-md bg-[#DE2E7D] text-[#FFFFFF] px-2 lg:px-2 py-2 lg:py-1 sm:mr-2 lg:mr-0"
+              >Sign in</a
+            >
+            <a
+              href="#"
+              class="rounded-full text-md bg-[#FFFFFF] text-[#DE2E7D] border border-[#DE2E7D] hover:bg-[#DE2E7D] hover:text-[#FFFFFF] px-2 lg:px-2 py-2 lg:py-1 sm:mr-2 lg:mr-0"
+              >Log in</a
+            >
+          </div>
+          <button
+            data-collapse-toggle="mobile-menu-2"
+            type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden"
+            aria-controls="mobile-menu-2"
+            aria-expanded="false"
+            onclick="toggleMobileMenu()"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden w-full lg:flex lg:w-auto" id="mobile-menu-2">
+          <ul
+            class="flex flex-col mt-2 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-[#DE2E7D] rounded lg:bg-transparent lg:text-[#DE2E7D] lg:p-0"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#DE2E7D] lg:p-0"
+                >What is</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#DE2E7D] lg:p-0"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#DE2E7D] lg:p-0"
+                >Prices</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#DE2E7D] lg:p-0"
+                >For Agencies</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-[#DE2E7D] lg:p-0"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block lg:hidden rounded-full text-md bg-[#DE2E7D] text-[#FFFFFF] px-2 lg:px-2 py-2 lg:py-1 sm:mr-2 lg:mr-0 mb-3 text-center"
+                >Sign in</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block lg:hidden rounded-full text-md bg-[#FFFFFF] text-[#DE2E7D] border border-[#DE2E7D] hover:bg-[#DE2E7D] hover:text-[#FFFFFF] px-2 lg:px-2 py-2 lg:py-1 sm:mr-2 lg:mr-0 text-center mb-6"
+                >Log in</a
+              >
+            </li>
+            <hr class="mb-3" />
+            <li>
+              <a
+                href="#"
+                class="block text-[#162739] lg:p-0 rounded-md text-md lg:bg-[#DE2E7D] lg:text-[#FFFFFF] px-2 lg:px-2 lg:py-1 sm:mr-2 lg:mr-0 text-center lg:text-left mb-3"
+                >Are You Agency?</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-[#FFFFFF] lg:hidden rounded-full text-md bg-[#DE2E7D] px-2 lg:px-2 lg:py-1 sm:mr-2 lg:mr-0 text-center"
+                >Discover how to offer innovative services</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+      class="flex flex-col items-center justify-center bg-background p-4 md:min-h-screen max-w-5xl mx-auto text-center mt-10"
+    >
+      <h1
+        class="text-5xl sm:text-8xl mt-8 md:mt-0 font-bold text-[#274464] mb-6"
+      >
+        Create your <span class="text-[#DE2E7D]">Chatbot</span> based on
+        artificial intelligence
+      </h1>
+      <p class="text-xl text-[#162973] mb-6 max-w-4xl">
+        The creation of chatbots has become a crucial element for many
+        individuals and businesses looking to improve the efficiency of their
+        interactions or customer relationships, and now, with AI Chat, it's even
+        more accessible to everyone.
+      </p>
+      <a
+        href="#"
+        class="bg-[#DE2E7D] text-[#FFFFFF] text-xl font-semibold py-2 px-4 rounded-full mb-4"
+      >
+        Sign in, it's free!
+      </a>
+
+      <div class="flex items-center justify-center p-6">
+        <h2 class="text-md text-[#274464] mr-2">Selected by</h2>
+        <img
+          src="https://ai-chat.it/img/clients-partners/GC-startup.png"
+          alt="Google Cloud for Startups"
+          class="h-10 w-auto"
+        />
+      </div>
+    </div>
+
+    <!-- Brands Section -->
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center p-6">
+      <h2 class="text-xl md:text-xl font-semibold text-[#162739] mb-5">
+        Clients and partners
+      </h2>
+      <div class="flex flex-wrap justify-center items-center">
+        <img
+          src="https://ai-chat.it/img/clients-partners/uniparma.png"
+          alt="SKANSKA"
+          class="h-7 w-14 md:h-14 md:w-32 object-cover"
+        />
+        <img
+          src="https://ai-chat.it/img/clients-partners/luccacomics.png"
+          alt="STRABAG"
+          class="h-7 w-14 md:h-14 md:w-32 object-cover"
+        />
+        <img
+          src="https://ai-chat.it/img/clients-partners/harpaceas.png"
+          alt="Perkins&Will"
+          class="h-7 w-14 md:h-14 md:w-32 object-cover"
+        />
+        <img
+          src="https://ai-chat.it/img/clients-partners/dsf.png"
+          alt="ARUP"
+          class="h-7 w-14 md:h-14 md:w-32 object-cover"
+        />
+        <img
+          src="https://ai-chat.it/img/clients-partners/azimut.png"
+          alt="ROSSETTI"
+          class="h-7 w-14 md:h-14 md:w-32 object-cover"
+        />
+        <img
+          src="https://ai-chat.it/img/clients-partners/algoretico.png"
+          alt="ROSSETTI"
+          class="h-7 w-14 md:h-14 md:w-32 object-cover"
+        />
+      </div>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="content">
+      <div class="subject-container">
+        <div class="flex flex-col p-4 max-w-lg mx-auto mt-32 mb-24">
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>What is AI Chat?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  AI Chat is a service that allows you to create AI-powered
+                  chatbots that learn important information for you.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>How can I create a Chatbot?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  It only takes a few clicks: choose a name, an avatar, and the
+                  information you want it to learn, and you're good to go. We
+                  will create a simple link for you to use the chatbot. And if
+                  you want to integrate it into your website, you'll have a
+                  dedicated script.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>How do I provide the information?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  Use the documentation you already have without needing to
+                  adapt it. It can be a link or a file. AI Chat supports various
+                  formats, including PDF, text, spreadsheets, and more.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>How do I integrate the chatbot on my website?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  To integrate the chatbot on your website, we will create a
+                  simple script for you to insert into your site. Just copy and
+                  paste it, and the chatbot will appear on your site.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>Can the chatbot speak multiple languages?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  Yes, the chatbot can support multiple languages. You just need
+                  to provide documentation in the desired languages and
+                  configure the chatbot settings to handle different languages.
+                  This way, you can assist users from around the world.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>Is it possible to use AI Chat for free?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  AI Chat offers a free plan that provides access to basic
+                  features. However, to fully utilize the features, there are
+                  paid plans available for more advanced and business needs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10 justify-end">
+              <div
+                class="bg-[#1E354D] text-[#FFFFFF] p-2 px-3 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>Can the chatbot answer complex questions?</p>
+              </div>
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1E354D] shadow-2xl"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side chat Message -->
+          <div class="subject animation">
+            <div class="flex items-start space-x-6 mb-10">
+              <div
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-[#DE2E7D]"
+              >
+                <svg
+                  width="166px"
+                  height="166px"
+                  viewBox="-2.4 -2.4 28.80 28.80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#FFFFFF"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="bg-[#DE2E7D] text-[#FFFFFF] p-3 rounded-bl-2xl rounded-tr-2xl rounded-br-2xl shadow-2xl shadow-black"
+              >
+                <p>
+                  Yes, the chatbot is designed to learn from your documentation
+                  and become smarter over time. However, its ability to answer
+                  complex questions will depend on your ability to provide
+                  comprehensive information.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Side Box Section -->
+    <div class="p-5">
+      <div
+        class="bg-[#DE2E7D] text-[#162973] rounded-tr-3xl rounded-br-3xl rounded-bl-3xl shadow-lg max-w-5xl p-5 md:p-20 md:ml-24"
+      >
+        <h1 class="text-5xl lg:text-7xl font-bold mb-4 text-[#274464]">
+          È il tipo di tecnologia che cercavi?
+        </h1>
+        <p class="text-xl mb-6 text-[#162739]">
+          Possiamo aiutarti a creare e gestire il tuo o i tuoi chatbot in modo
+          efficiente e personalizzato. Contattaci per scoprire come possiamo
+          aiutarti a raggiungere i tuoi obiettivi con un chatbot di successo.
+        </p>
+        <a
+          href="#"
+          class="bg-[#034289] text-[#FFFFFF] text-lg font-semibold py-2 px-4 rounded-md mb-6"
+          >Contact us now</a
+        >
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center text-sm text-[#162739] mt-16 mb-5">
+      <p class="mb-1">© 2024 Al Chat S.r.l.</p>
+      <p class="mb-1">Innovative Startup</p>
+      <p class="mb-1">VAT: 13520720967 - info@ai-chat.it</p>
+      <p class="mb-1">Registered Office: Piazza V. Emanuele II, 1, 20014</p>
+      <p class="mb-1">Nerviano MI</p>
+      <p>
+        <a href="#" class="text-[#DE2E7D] underline">Privacy Policy,</a>
+        <a href="#" class="text-[#DE2E7D] underline">Terms and Conditions,</a>
+        <a href="#" class="text-[#DE2E7D] underline">Contact </a>
+      </p>
+    </footer>
+  </body>
+</html>
